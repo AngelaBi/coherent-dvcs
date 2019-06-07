@@ -9,6 +9,14 @@
   treemaker.Branch("PBANK.Vy/F");
   treemaker.Branch("PBANK.Vz/F");
   treemaker.Branch("PBANK.Pid/I");
+  treemaker.Branch("HTCC.Nphe/F");
+  treemaker.Branch("P.Theta/F");
+  treemaker.Branch("P.Phi/F");
+  treemaker.Branch("CTOF.Time/F");
+  treemaker.Branch("ECIN.Energy/F");
+  treemaker.Branch("ECOUT.Energy/F");
+  treemaker.Branch("P.Region/F");
+
 
   //e.g. Only save electron information
   // treemaker.AddParticleCut("PBANK.Pid==11");
