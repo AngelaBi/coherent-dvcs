@@ -16,11 +16,7 @@
   treemaker.Branch("ECIN.Energy/F");
   treemaker.Branch("ECOUT.Energy/F");
   treemaker.Branch("P.Region/F");
-  treemaker.Branch("P.Region/I");
-  treemaker.Branch("P.Theta/F");
-  treemaker.Branch("HTCC.Nphe/I");
   treemaker.Branch("P.P/F");
-
 
   //e.g. Only save electron information
   // treemaker.AddParticleCut("PBANK.Pid==11");
