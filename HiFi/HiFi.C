@@ -129,9 +129,9 @@
 
 
 
-  treemaker.Branch("PBANK.Pid/I"); 
-  treemaker.Branch("PBANK.Charge/I");
-  treemaker.Branch("PBANK.Status/I");
+  treemaker.Branch("PBANK.Pid/F"); 
+  treemaker.Branch("PBANK.Charge/F");
+  treemaker.Branch("PBANK.Status/F");
   treemaker.Branch("PBANK.Px/F");
   treemaker.Branch("PBANK.Py/F");
   treemaker.Branch("PBANK.Pz/F");
@@ -147,7 +147,8 @@
   treemaker.Branch("P.Region/F");
   treemaker.Branch("P.P/F");
 
-  treemaker.Branch("Event.NEVENT/I");
+  treemaker.Branch("EVNT.Helicity/I");
+
 
   treemaker.Branch("CND1.Index/I");
   treemaker.Branch("CND1.Pindex/I");
@@ -162,7 +163,7 @@
 
   treemaker.Branch("ECIN.Index/F");
   treemaker.Branch("ECIN.Pindex/F");
-  treemaker.Branch("ECIN.Detector/F");
+//  treemaker.Branch("ECIN.Detector/F");
   treemaker.Branch("ECIN.Sector/F");
   treemaker.Branch("ECIN.Layer/F");
   treemaker.Branch("ECIN.Status/F");
@@ -192,7 +193,7 @@
 
   treemaker.Branch("ECOUT.Index/F");
   treemaker.Branch("ECOUT.Pindex/F");
-  treemaker.Branch("ECOUT.Detector/F");
+//  treemaker.Branch("ECOUT.Detector/F");
   treemaker.Branch("ECOUT.Sector/F");
   treemaker.Branch("ECOUT.Layer/F");
   treemaker.Branch("ECOUT.Status/F");
@@ -222,7 +223,7 @@
 
   treemaker.Branch("PCAL.Index/F");
   treemaker.Branch("PCAL.Pindex/F");
-  treemaker.Branch("PCAL.Detector/F");
+//  treemaker.Branch("PCAL.Detector/F");
   treemaker.Branch("PCAL.Sector/F");
   treemaker.Branch("PCAL.Layer/F");
   treemaker.Branch("PCAL.Status/F");
@@ -251,7 +252,7 @@
 
   treemaker.Branch("HTCC.Index/F");
   treemaker.Branch("HTCC.Pindex/F");
-  treemaker.Branch("HTCC.Detector/F");
+//  treemaker.Branch("HTCC.Detector/F");
   treemaker.Branch("HTCC.Sector/F");
   treemaker.Branch("HTCC.Status/F");
   treemaker.Branch("HTCC.Nphe/I");
