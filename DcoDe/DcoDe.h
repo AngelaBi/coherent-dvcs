@@ -32,6 +32,11 @@ class DcoDe : public TSelector {
 public :
    TTreeReader     fReader;  //!the tree reader
    TTree          *fChain = 0;   //!pointer to the analyzed TTree or TChain
+   TTree *el_tree, *pDVCS_tree, *nDVCS_tree;
+   TFile *outfile;
+   void AddBranches();
+   void Calc_kine_P();
+   void Calc_kine_N();
 
    // Readers to access the data (delete the ones you do not need).
    TTreeReaderArray<Float_t> CLAS12Data_PBANK_Pid = {fReader, "CLAS12Data.PBANK_Pid"};
@@ -181,10 +186,21 @@ public :
    virtual TList  *GetOutputList() const { return fOutput; }
    virtual void    SlaveTerminate();
    virtual void    Terminate();
-
+//Initialize histograms
    TH1F *h=new TH1F("h","h",100,-1,12);
 
-   ClassDef(DcoDe,0);
+//Initialize constants
+Float_t EBEAM=10.2, MPROT=0.938272, MNEUT=0.93957, MDEUT=1.8756, LIGHTSPEED=29.9792458,MELE=0.000511;
+
+//Initialize Variables
+Int_t nElec=0,nProt=0,nNeut=0,nphotElec=0,nPh=0,nPion=0, RunNumber=0;
+Int_t i_Elec=-1,i_Prot=-1,i_Neut=-1, i_photElec=-1, i_Ph=-1, CD_Neut=0, FD_Neut=0, CD_Prot=0, FD_Prot=0;
+Float_t Q2, Xbj, W, t_Elec, t_Prot, t_Neut, t_Ph, Theta_Elec, Elec_Theta, Theta_Prot, Prot_Theta, Theta_Neut, Neut_Theta, Theta_Ph, Ph_Theta, Phi_Elec, Elec_Phi, Phi_Prot, Prot_Phi, Phi_Neut, Neut_Phi, Phi_Ph, Ph_Phi, Elec_P, Ph_P, Prot_P, Neut_P, Elec_Pz, Ph_Pz, Prot_Pz, Prot_Vz, Neut_Pz, Elec_Vx, Elec_Vy,Elec_Vz;
+Float_t mm2_epg, mm2_eng, mm2_ep, mm2_eg;
+Float_t Xbal, Ybal, Zbal, Ebal;
+TLorentzVector ElectronBeam, Target_Vec,PTarget_Vec,NTarget_Vec;
+TLorentzVector Elec_Vec,Prot_Vec,Neut_Vec,Ph_Vec;
+ClassDef(DcoDe,0);
 
 };
 
