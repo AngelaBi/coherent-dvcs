@@ -42,21 +42,6 @@
 //   treemaker.Branch("");
 //   treemaker.Branch("");
 
-//   treemaker.Branch("FTOF1A.Index/F");
-//   treemaker.Branch("FTOF1A.Pindex/I");
-//   treemaker.Branch("FTOF1A.Detector/F");
-//   treemaker.Branch("FTOF1A.Energy/F");
-//   treemaker.Branch("FTOF1A.Time/F");
-//   treemaker.Branch("FTOF1A.Path/F");
-//   treemaker.Branch("FTOF1A.Chi2/F");
-//   treemaker.Branch("FTOF1A.X/F");
-//   treemaker.Branch("FTOF1A.Y/F");
-//   treemaker.Branch("FTOF1A.Z/F");
-//   treemaker.Branch("FTOF1A.Dx/F");
-//   treemaker.Branch("FTOF1A.Dy/F");
-//   treemaker.Branch("FTOF1A.Radius/F");
-//   treemaker.Branch("FTOF1A.Size/F");
-//   treemaker.Branch("FTOF1A.Status/F");
 
 
 //   treemaker.Branch("Scintillator");
@@ -129,17 +114,17 @@
 
 
 
-  treemaker.Branch("PBANK.Pid/F"); 
-  treemaker.Branch("PBANK.Charge/F");
-  treemaker.Branch("PBANK.Status/F");
+  treemaker.Branch("PBANK.Pid/I"); 
+  treemaker.Branch("PBANK.Charge/I");
+  treemaker.Branch("PBANK.Status/I");
   treemaker.Branch("PBANK.Px/F");
   treemaker.Branch("PBANK.Py/F");
   treemaker.Branch("PBANK.Pz/F");
   treemaker.Branch("PBANK.Vx/F");
   treemaker.Branch("PBANK.Vy/F");
   treemaker.Branch("PBANK.Vz/F");
-//   treemaker.Branch("PBANK.Beta/F");
-//   treemaker.Branch("PBANK.Chi2pid/F");
+////   treemaker.Branch("PBANK.Beta/F");
+////   treemaker.Branch("PBANK.Chi2pid/F");
   treemaker.Branch("P.Time/F");
   treemaker.Branch("P.Theta/F");
   treemaker.Branch("P.Phi/F");
@@ -147,8 +132,18 @@
   treemaker.Branch("P.Region/F");
   treemaker.Branch("P.P/F");
 
-  treemaker.Branch("EVNT.Helicity/I");
-
+  treemaker.Branch("EVNT.RunNumber/I");
+  treemaker.Branch("EVNT.EventNumber/I");
+ // treemaker.Branch("EVNT.Helicity/I");
+ // treemaker.Branch("HEL.helicity/I");
+  treemaker.Branch("EVNT.Type/I");
+  treemaker.Branch("EVNT.StartTime/F");
+  treemaker.Branch("EVNT.RFTime/F");
+//  treemaker.Branch("EVNT.EVNime/F");
+//  treemaker.Branch("EVNT.BCG/F");
+//  treemaker.Branch("EVNT.NPGP/I");
+  //treemaker.Branch("EVNT.LT/F"); //not working wrong type
+  treemaker.Branch("EVNT.Trigger/L");
 
   treemaker.Branch("CND1.Index/I");
   treemaker.Branch("CND1.Pindex/I");
@@ -161,12 +156,12 @@
   treemaker.Branch("CND1.Y/F");
   treemaker.Branch("CND1.Z/F");
 
-  treemaker.Branch("ECIN.Index/F");
-  treemaker.Branch("ECIN.Pindex/F");
+  treemaker.Branch("ECIN.Index/I");
+  treemaker.Branch("ECIN.Pindex/I");
 //  treemaker.Branch("ECIN.Detector/F");
-  treemaker.Branch("ECIN.Sector/F");
-  treemaker.Branch("ECIN.Layer/F");
-  treemaker.Branch("ECIN.Status/F");
+  treemaker.Branch("ECIN.Sector/I");
+  treemaker.Branch("ECIN.Layer/I");
+  treemaker.Branch("ECIN.Status/I");
   treemaker.Branch("ECIN.Energy/F");
   treemaker.Branch("ECIN.Time/F");
   treemaker.Branch("ECIN.Path/F");
@@ -177,9 +172,9 @@
   treemaker.Branch("ECIN.Hx/F");
   treemaker.Branch("ECIN.Hy/F");
   treemaker.Branch("ECIN.Hz/F");
-  treemaker.Branch("ECIN.Lu/F");
-  treemaker.Branch("ECIN.Lv/F");
-  treemaker.Branch("ECIN.Lw/F");
+//  treemaker.Branch("ECIN.Lu/F");
+//  treemaker.Branch("ECIN.Lv/F");
+//  treemaker.Branch("ECIN.Lw/F");
   treemaker.Branch("ECIN.Du/F");
   treemaker.Branch("ECIN.Dv/F");
   treemaker.Branch("ECIN.Dw/F");
@@ -207,9 +202,9 @@
   treemaker.Branch("ECOUT.Hx/F");
   treemaker.Branch("ECOUT.Hy/F");
   treemaker.Branch("ECOUT.Hz/F");
-  treemaker.Branch("ECOUT.Lu/F");
-  treemaker.Branch("ECOUT.Lv/F");
-  treemaker.Branch("ECOUT.Lw/F");
+//  treemaker.Branch("ECOUT.Lu/F");
+//  treemaker.Branch("ECOUT.Lv/F");
+//  treemaker.Branch("ECOUT.Lw/F");
   treemaker.Branch("ECOUT.Du/F");
   treemaker.Branch("ECOUT.Dv/F");
   treemaker.Branch("ECOUT.Dw/F");
@@ -237,9 +232,9 @@
   treemaker.Branch("PCAL.Hx/F");
   treemaker.Branch("PCAL.Hy/F");
   treemaker.Branch("PCAL.Hz/F");
-  treemaker.Branch("PCAL.Lu/F");
-  treemaker.Branch("PCAL.Lv/F");
-  treemaker.Branch("PCAL.Lw/F");
+//  treemaker.Branch("PCAL.Lu/F");
+//  treemaker.Branch("PCAL.Lv/F");
+//  treemaker.Branch("PCAL.Lw/F");
   treemaker.Branch("PCAL.Du/F");
   treemaker.Branch("PCAL.Dv/F");
   treemaker.Branch("PCAL.Dw/F");
@@ -249,6 +244,7 @@
   treemaker.Branch("PCAL.M3u/F");
   treemaker.Branch("PCAL.M3v/F");
   treemaker.Branch("PCAL.M3w/F");
+
 
   treemaker.Branch("HTCC.Index/F");
   treemaker.Branch("HTCC.Pindex/F");
@@ -267,6 +263,21 @@
   treemaker.Branch("HTCC.Dtheta/F");
   treemaker.Branch("HTCC.DPhi/F");
 
+  treemaker.Branch("FTCAL.Index/F");
+  treemaker.Branch("FTCAL.Pindex/I");
+  treemaker.Branch("FTCAL.Detector/F");
+  treemaker.Branch("FTCAL.Energy/F");
+  treemaker.Branch("FTCAL.Time/F");
+  treemaker.Branch("FTCAL.Path/F");
+  treemaker.Branch("FTCAL.Chi2/F");
+  treemaker.Branch("FTCAL.X/F");
+  treemaker.Branch("FTCAL.Y/F");
+  treemaker.Branch("FTCAL.Z/F");
+  treemaker.Branch("FTCAL.Dx/F");
+  treemaker.Branch("FTCAL.Dy/F");
+  treemaker.Branch("FTCAL.Radius/F");
+  treemaker.Branch("FTCAL.Size/F");
+  treemaker.Branch("FTCAL.Status/F");
 
 
 

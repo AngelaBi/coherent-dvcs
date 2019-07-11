@@ -400,8 +400,7 @@ void ana_clas12::Calc_kine_N()
 //       N_Phi_MC=180./TMath::Pi()*N_Vec_MC.Phi();
 //       Pr_Vec_MC.SetPxPyPzE((MC_Particle_px)[1],(MC_Particle_py)[1],(MC_Particle_pz)[1],TMath::Sqrt(pmom[1]*pmom[1]+Pmass*Pmass));
 //       Pr_P_MC=Pr_Vec_MC.P();
-//       Pr_Theta_MC=180./TMath::Pi()*Pr_Vec_MC.Theta();
-//       Pr_Phi_MC=180./TMath::Pi()*Pr_Vec_MC.Phi();
+
 //     }
 
 //     Ph_Vec_MC.SetPxPyPzE((MC_Particle_px)[3],(MC_Particle_py)[3],(MC_Particle_pz)[3],pmom[3]);
